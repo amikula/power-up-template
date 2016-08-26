@@ -11,6 +11,8 @@ TrelloPowerUp.initialize({
       return attachment.url.indexOf('http://dashboard.checkr.com/reports/') == 0;
     });
 
+    console.log(claimed);
+
     // you can have more than one attachment section on a card
     // you can group items together into one section, have a section
     // per attachment, or anything in between.
