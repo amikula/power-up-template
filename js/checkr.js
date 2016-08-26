@@ -73,7 +73,7 @@ var formatNPSUrl = function(t, url){
   }
   var parkShort = /^https?:\/\/www\.nps\.gov\/([a-z]{4})\//.exec(url)[1];
   if(parkShort && parkMap[parkShort]){
-    return parkMap[parkShort];
+    return "Mark1-" + parkMap[parkShort];
   } else{
     return null;
   }
