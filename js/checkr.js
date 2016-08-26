@@ -145,7 +145,7 @@ TrelloPowerUp.initialize({
 
     // we will just claim urls for Yellowstone
     var claimed = options.entries.filter(function(attachment){
-      return attachment.url.indexOf('https://dashboard.checkr.com/reports/') == 0;
+      return attachment.url.indexOf('http://www.nps.gov/yell') == 0;
     });
 
     // you can have more than one attachment section on a card
@@ -172,7 +172,7 @@ TrelloPowerUp.initialize({
     }
   },
   'attachment-thumbnail': function(t, options){
-    var parkName = formatNPSUrl(t, options.url);
+    var parkName = "1-" + formatNPSUrl(t, options.url);
     if(parkName){
       // return an object with some or all of these properties:
       // url, title, image, openText, modified (Date), created (Date), createdBy, modifiedBy
@@ -210,7 +210,7 @@ TrelloPowerUp.initialize({
     return getBadges(t);
   },
   'card-from-url': function(t, options) {
-    var parkName = formatNPSUrl(t, options.url);
+    var parkName = "2-" + formatNPSUrl(t, options.url);
     if(parkName){
       return {
         name: parkName,
@@ -221,7 +221,7 @@ TrelloPowerUp.initialize({
     }
   },
   'format-url': function(t, options) {
-    var parkName = formatNPSUrl(t, options.url);
+    var parkName = "3-" + formatNPSUrl(t, options.url);
     if(parkName){
       return {
         icon: GRAY_ICON,
