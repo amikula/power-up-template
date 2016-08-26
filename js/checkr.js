@@ -145,10 +145,8 @@ TrelloPowerUp.initialize({
 
     // we will just claim urls for Yellowstone
     var claimed = options.entries.filter(function(attachment){
-      return attachment.url.indexOf('http://www.nps.gov/yell/') == 0;
+      return attachment.url.indexOf('https://dashboard.checkr.com/reports/') == 0;
     });
-
-    console.log(claimed);
 
     // you can have more than one attachment section on a card
     // you can group items together into one section, have a section
